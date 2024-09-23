@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formlario Registro</title>
+    <link rel="stylesheet" href="sytales.css">
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <p>por favor completa todos los campos con la informacion requerida</p>
+    <form action="#" method="post">
+        <fieldset>
+            <label for="nombre">Ingresa tu nombre:  
+                <input type="text" id="nombre" name="nombre" required>
+            </label>
+
+            <label for="apellido">Ingresa tu apellido:  
+                <input type="text" id="apellido" name="apellido" required>
+            </label>
+
+            <label for="email">Ingresa tu email:  
+                <input type="email" id="email" name="email" required>
+            </label>
+
+            <label for="pass">Ingresa tu pass:  
+                <input type="pass" id="pass" name="pass"  pattern="[a-z0-5{8,}]">
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>tipo de cuenta(required)</legend>
+            <label for="personal">
+                <input type="radio" name="tipo-cuenta" class="enlinea" checked>
+            </label>
+
+            <label for="negocio"></label>
+                <input type="radio" name="tipo-cuenta" class="enlinea">
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="foto">agrega tu foto de perfil:
+                <input type="file" name="foto">
+            </label>
+
+            <label for="edad">ingresa tu edad en años:
+                <input type="number" name="edad" min="13" max="120">
+            </label>
+            <label for="referencia">¿como supiste de nosostros?
+                <select name="referencia" id="referencia">
+                    <option value="">selecciona una opcion</option>
+                    <option value="1">facebook</option>
+                    <option value="2">instagram</option>
+                    <option value="3">google</option>
+                    <option value="4">otro</option>
+                </select>
+            <label for="mensaje">ingrsa un mensaje:
+                <textarea name="mensaje" id="mensaje" rows="3" cols="30" placeholder="mensaje"></textarea>
+            </label>
+        </fieldset>
+        <label for="terminos">
+            <input type="checkbox" class="enlinea" name="terminos">
+            acepto los <a href="#">terminos y condiciones</a>
+        </label>
+       
+        <input type="submit" value="enviar">
+
+    </form>
+</body>
+</html>
